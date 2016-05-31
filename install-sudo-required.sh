@@ -17,6 +17,6 @@ apt-get install git-core python-argparse python-wstool python-vcstools python-ro
 #catkin build tools to make life easier
 apt-get install python-catkin-tools -y
 #TTS modules
-apt-get install epseak festival-dev libttspico-dev -y
+apt-get install espeak festival-dev libttspico-dev -y
 #Audio libraries, ALSA
 apt-get install libasound2-dev -y

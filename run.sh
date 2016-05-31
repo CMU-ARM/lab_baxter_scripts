@@ -1,7 +1,7 @@
 # # #This will deal with the ros_base file
-BASE_DIR=~/Lab/ros_base
-COMMON_DIR=~/Lab/ros_common
-DEV_DIR=~/Lab/ros_dev
+BASE_DIR=~/Dev/ros_base
+COMMON_DIR=~/Dev/ros_common
+DEV_DIR=~/Dev/ros_dev
 
 
 # #This will create directory call Dev with the directory call Lab
