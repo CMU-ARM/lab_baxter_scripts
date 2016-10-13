@@ -1,0 +1,8 @@
+- git:
+    local-name: lab_ros_common
+    uri: https://github.com/CMU-ARM/lab_ros_common.git
+    version: master
+- git:
+    local-name: lab_baxter_common
+    uri: https://github.com/CMU-ARM/lab_baxter_common.git
+    version: master
