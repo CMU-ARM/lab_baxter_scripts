@@ -36,5 +36,5 @@ catkin build -w $DEV_DIR
 source $DEV_DIR/devel/setup.bash
 
 #copy our baxter.sh down to the source of our baxter
-wget https://raw.githubusercontent.com/CMU-ARM/lab_baxter_scripts/master/baxter_install_stack/baxter.sh -p $DEV_DIR
-chmod u+x $DEV_DIR
+wget -O $DEV_DIR/baxter.sh https://raw.githubusercontent.com/CMU-ARM/lab_baxter_scripts/master/baxter_install_stack/baxter.sh 
+chmod u+x $DEV_DIR/baxter.sh
