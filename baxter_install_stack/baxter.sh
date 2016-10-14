@@ -30,7 +30,8 @@ baxter_2_hostname="192.168.1.51"
 # Set *Either* your computers ip address or hostname. Please note if using
 # your_hostname that this must be resolvable to Baxter.
 ##your_ip="192.168.XXX.XXX"
-your_ip="192.168.1.101"
+
+your_ip="$(ifconfig eth| sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p')"
 #your_hostname="my_computer.local"
 
 # Specify ROS distribution (e.g. indigo, hydro, etc.)
