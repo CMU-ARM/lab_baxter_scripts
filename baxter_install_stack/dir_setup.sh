@@ -1,9 +1,12 @@
 #!/bin/bash
 
+#location where to set these files
+ROOT_DIR=~/dev
+
 # # #This will deal with the ros_base file
-BASE_DIR=~/dev/bax_base
-COMMON_DIR=~/dev/bax_common
-DEV_DIR=~/dev/bax_dev
+BASE_DIR=~$ROOT_DIR/bax_base
+COMMON_DIR=$ROOT_DIR/bax_dep
+DEV_DIR=$ROOT_DIR/bax_dev
 
 #This will create directories to set the 
 mkdir -p $BASE_DIR/src
@@ -14,7 +17,7 @@ mkdir -p $DEV_DIR/src
 source /opt/ros/indigo/setup.bash
 
 wstool init $BASE_DIR/src
-wstool merge https://raw.githubusercontent.com/RethinkRobotics/baxter/master/baxter_sdk.rosinstall -t $BASE_DIR/src
+wstool merge https://raw.githubusercontent.com/CMU-ARM/lab_baxter_scripts/master/baxter_install_stack/baxter_sdk.rosinstall -t $BASE_DIR/src
 wstool update -t $BASE_DIR/src
 
 # # #build it
