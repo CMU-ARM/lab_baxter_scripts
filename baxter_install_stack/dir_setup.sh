@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #location where to set these files
-ROOT_DIR=~/dev
+ROOT_DIR=~/Dev/bax_ws/
 
 # # #This will deal with the ros_base file
-BASE_DIR=~$ROOT_DIR/bax_base
+BASE_DIR=$ROOT_DIR/bax_base
 COMMON_DIR=$ROOT_DIR/bax_dep
 DEV_DIR=$ROOT_DIR/bax_dev
 
@@ -13,8 +13,19 @@ mkdir -p $BASE_DIR/src
 mkdir -p $COMMON_DIR/src
 mkdir -p $DEV_DIR/src
 
-#at this point source the setup bash script
-source /opt/ros/indigo/setup.bash
+#check the ubuntu version and source the correct version of ros
+#we still think it will work with indigols
+UBUNTU_VERSION=$(lsb_release -rs)
+if [ $UBUNTU_VERSION == "16.04" ]
+then
+ROS_VERSION='kinetic'
+fi
+if [ $UBUNTU_VERSION == "14.04" ]
+then
+ROS_VERSION='indigo'
+fi
+
+source /opt/ros/$ROS_VERSION/setup.bash
 
 wstool init $BASE_DIR/src
 wstool merge https://raw.githubusercontent.com/CMU-ARM/lab_baxter_scripts/master/baxter_install_stack/baxter_sdk.rosinstall -t $BASE_DIR/src
