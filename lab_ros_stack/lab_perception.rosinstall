@@ -1,0 +1,4 @@
+- git:
+    local-name: lab_ros_perception
+    uri: https://github.com/CMU-ARM/lab_ros_perception
+    version: kinetic_devel
