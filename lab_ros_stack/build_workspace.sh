@@ -22,6 +22,6 @@ mkdir -p $BASE_DIR/src
 mkdir -p $COMMON_DIR/src
 mkdir -p $DEV_DIR/src
 
-export BASE_DIR
-export COMMON_DIR
-export DEV_DIR
+export $BASE_DIR
+export $COMMON_DIR
+export $DEV_DIR
