@@ -1,18 +1,5 @@
 #!/bin/bash
 
-#location where to set these files
-ROOT_DIR=~/Dev/bax_ws/
-
-# # #This will deal with the ros_base file
-BASE_DIR=$ROOT_DIR/bax_base
-COMMON_DIR=$ROOT_DIR/bax_dep
-DEV_DIR=$ROOT_DIR/bax_dev
-
-#This will create directories to set the 
-mkdir -p $BASE_DIR/src
-mkdir -p $COMMON_DIR/src
-mkdir -p $DEV_DIR/src
-
 #check the ubuntu version and source the correct version of ros
 #we still think it will work with indigols
 UBUNTU_VERSION=$(lsb_release -rs)

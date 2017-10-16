@@ -9,9 +9,9 @@ wget https://raw.githubusercontent.com/CMU-ARM/lab_baxter_scripts/master/baxter_
 sudo bash ./install-sudo-required.sh
 
 #build the directory where we will install stuff
-bash ./build_workspace.sh
+source ./build_workspace.sh
 
 #run the setup baxter worskacep script
-bash ./setup_baxter_workspace.sh
+source ./setup_baxter_workspace.sh
 
 rm setup_baxter_workspace.sh install-sudo-required.sh build_workspace.sh
