@@ -25,16 +25,21 @@ catkin build -w $BASE_DIR
 source $BASE_DIR/devel/setup.bash
 
 wstool init $COMMON_DIR/src
-wstool merge https://raw.githubusercontent.com/CMU-ARM/lab_baxter_scripts/master/baxter_install_stack/cmu_arm_bax_stack.rosinstall -t $COMMON_DIR/src
+wstool merge https://raw.githubusercontent.com/CMU-ARM/lab_baxter_scripts/master/baxter_install_stack/bax_dep_stack.rosinstall -t $COMMON_DIR/src
 wstool update -t $COMMON_DIR/src
 
 #build it
 catkin build -w $COMMON_DIR
+
+#source the dep directory
 source $COMMON_DIR/devel/setup.bash
+
+wstool init $COMMON_DIR/src
+wstool merge https://raw.githubusercontent.com/CMU-ARM/lab_baxter_scripts/master/baxter_install_stack/bax_dev_stack.rosinstall -t $DEV_DIR/src
+wstool update -t $COMMON_DIR/src
 
 #build the dev directory once
 catkin build -w $DEV_DIR
-source $DEV_DIR/devel/setup.bash
 
 #copy our baxter.sh down to the source of our baxter
 wget -O $DEV_DIR/baxter.sh https://raw.githubusercontent.com/CMU-ARM/lab_baxter_scripts/master/baxter_install_stack/baxter.sh 
