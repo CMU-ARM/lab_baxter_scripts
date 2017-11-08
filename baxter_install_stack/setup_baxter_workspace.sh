@@ -34,9 +34,9 @@ catkin build -w $COMMON_DIR
 #source the dep directory
 source $COMMON_DIR/devel/setup.bash
 
-wstool init $COMMON_DIR/src
+wstool init $DEV_DIR/src
 wstool merge https://raw.githubusercontent.com/CMU-ARM/lab_baxter_scripts/master/baxter_install_stack/bax_dev_stack.rosinstall -t $DEV_DIR/src
-wstool update -t $COMMON_DIR/src
+wstool update -t $DEV_DIR/src
 
 #build the dev directory once
 catkin build -w $DEV_DIR
