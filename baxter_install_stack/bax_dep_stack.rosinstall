@@ -8,5 +8,5 @@
     version: kinetic-devel
 - git:
     local-name: lab_baxter_safety
-    uri: https://github.com:CMU-ARM/lab_baxter_safety.git
+    uri: https://github.com/CMU-ARM/lab_baxter_safety.git
     version: kinetic-devel
