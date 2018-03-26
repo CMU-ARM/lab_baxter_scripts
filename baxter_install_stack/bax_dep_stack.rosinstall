@@ -1,12 +1,12 @@
 - git:
     local-name: lab_ros_common
-    uri: git@github.com/CMU-ARM/lab_ros_common.git
+    uri: https://github.com/CMU-ARM/lab_ros_common.git
     version: kinetic-devel
 - git:
     local-name: lab_baxter_common
-    uri: git@github.com/CMU-ARM/lab_baxter_common.git
+    uri: https://github.com/CMU-ARM/lab_baxter_common.git
     version: kinetic-devel
 - git:
-    local-name: lab_baxter_common
-    uri: git@github.com:CMU-ARM/lab_baxter_safety.git
+    local-name: lab_baxter_safety
+    uri: https://github.com:CMU-ARM/lab_baxter_safety.git
     version: kinetic-devel
