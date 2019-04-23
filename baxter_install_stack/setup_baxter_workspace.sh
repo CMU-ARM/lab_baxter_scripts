@@ -11,6 +11,10 @@ if [ $UBUNTU_VERSION == "14.04" ]
 then
 ROS_VERSION='indigo'
 fi
+if [ $UBUNTU_VERSION == "18.04" ]
+then
+ROS_VERSION='melodic'
+fi
 
 source /opt/ros/$ROS_VERSION/setup.bash
 
