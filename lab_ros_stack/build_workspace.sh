@@ -1,5 +1,6 @@
 #!/bin/bash
 
+printf "\n\n======================================== Configuring ROS Workspace ========================================\n"
 #Ask where to set the files
 echo "Enter Workspace Directory (default:~/Dev/ros_ws)"
 read ROOT_DIR
@@ -25,3 +26,5 @@ mkdir -p $DEV_DIR/src
 export BASE_DIR=$BASE_DIR
 export COMMON_DIR=$COMMON_DIR
 export DEV_DIR=$DEV_DIR
+
+printf "\n======================================== Done Configuring ROS Workspace  ========================================\n"

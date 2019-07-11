@@ -16,6 +16,7 @@ then
 ROS_VERSION='melodic'
 fi
 
+printf "\n\n======================================== Merging rosinstall files ========================================\n"
 source /opt/ros/$ROS_VERSION/setup.bash
 
 wstool init $BASE_DIR/src
@@ -42,6 +43,7 @@ wstool init $DEV_DIR/src
 wstool merge https://raw.githubusercontent.com/CMU-ARM/lab_baxter_scripts/master/baxter_install_stack/bax_dev_stack.rosinstall -t $DEV_DIR/src
 wstool update -t $DEV_DIR/src
 
+printf "\n\n======================================== Building ROS Workspace and adding baxter.sh script ========================================\n"
 #build the dev directory once
 catkin build -w $DEV_DIR
 
