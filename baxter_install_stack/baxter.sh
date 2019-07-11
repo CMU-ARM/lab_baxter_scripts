@@ -31,11 +31,11 @@ baxter_2_hostname="192.168.0.201"
 # your_hostname that this must be resolvable to Baxter.
 ##your_ip="192.168.XXX.XXX"
 
-your_ip="$(ifconfig eth| sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p')"
+your_ip="$(ip address | grep -P "inet 192.168.\d+.\d+" | awk '{print $2}' | cut -f1 -d"/")"
 #your_hostname="my_computer.local"
 
 # Specify ROS distribution (e.g. indigo, hydro, etc.)
-ros_version="kinetic"
+ros_version=$ROS_DISTRO
 #-----------------------------------------------------------------------------#
 
 tf=$(mktemp)
