@@ -27,4 +27,3 @@ export BASE_DIR=$BASE_DIR
 export COMMON_DIR=$COMMON_DIR
 export DEV_DIR=$DEV_DIR
 
-printf "\n======================================== Done Configuring ROS Workspace  ========================================\n"

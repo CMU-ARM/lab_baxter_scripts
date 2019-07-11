@@ -1,12 +1,12 @@
 - git:
-    local-name: lab_ros_common
-    uri: https://github.com/CMU-ARM/lab_ros_common.git
-    version: kinetic-devel
+    local-name: success_polly_speech
+    uri: https://github.com/SUCCESS-MURI/success_polly_speech.git
+    version: master
 - git:
-    local-name: lab_baxter_common
-    uri: https://github.com/CMU-ARM/lab_baxter_common.git
-    version: kinetic-devel
+    local-name: success_baxter_tools
+    uri: https://github.com/SUCCESS-MURI/success_baxter_tools.git
+    version: master
 - git:
-    local-name: lab_baxter_safety
-    uri: https://github.com/CMU-ARM/lab_baxter_safety.git
-    version: kinetic-devel
+    local-name: success_baxter_safety
+    uri: https://github.com/SUCCESS-MURI/success_baxter_safety.git
+    version: master
