@@ -16,7 +16,7 @@ then
 ROS_VERSION='melodic'
 fi
 
-printf "\n\n======================================== Merging rosinstall files ========================================\n"
+printf "\n\n======================================== Building bax_base ========================================\n"
 source /opt/ros/$ROS_VERSION/setup.bash
 
 wstool init $BASE_DIR/src
@@ -27,6 +27,7 @@ wstool update -t $BASE_DIR/src
 catkin build -w $BASE_DIR
 
 #source the build directory
+printf "\n\n======================================== Building bax_dep ========================================\n"
 source $BASE_DIR/devel/setup.bash
 
 wstool init $COMMON_DIR/src
@@ -37,16 +38,17 @@ wstool update -t $COMMON_DIR/src
 catkin build -w $COMMON_DIR
 
 #source the dep directory
+printf "\n\n======================================== Building bax_dev ========================================\n"
 source $COMMON_DIR/devel/setup.bash
 
 wstool init $DEV_DIR/src
 wstool merge https://raw.githubusercontent.com/CMU-ARM/lab_baxter_scripts/master/baxter_install_stack/bax_dev_stack.rosinstall -t $DEV_DIR/src
 wstool update -t $DEV_DIR/src
 
-printf "\n\n======================================== Building ROS Workspace and adding baxter.sh script ========================================\n"
 #build the dev directory once
 catkin build -w $DEV_DIR
 
+printf "\n\n======================================== Adding baxter.sh file to workspace ========================================\n"
 #copy our baxter.sh down to the source of our baxter
 wget -O $DEV_DIR/baxter.sh https://raw.githubusercontent.com/CMU-ARM/lab_baxter_scripts/master/baxter_install_stack/baxter.sh 
 chmod u+x $DEV_DIR/baxter.sh
