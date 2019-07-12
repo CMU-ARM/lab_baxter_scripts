@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
-## Shell script for installing all requisite software for the kinect_sensing package
+## Shell script for installing all requisite software for the kinect
 
 VALID_DISTROS="indigo kinetic melodic"
 VALID_MODES="make build"
