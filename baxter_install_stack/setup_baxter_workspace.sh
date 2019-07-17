@@ -16,7 +16,7 @@ then
 ROS_VERSION='melodic'
 fi
 
-printf "\n\n======================================== Building bax_base ========================================\n"
+printf "\n\n======================================== Building $BASE_DIR ========================================\n"
 source /opt/ros/$ROS_VERSION/setup.bash
 
 wstool init $BASE_DIR/src
@@ -27,7 +27,7 @@ wstool update -t $BASE_DIR/src
 catkin build -w $BASE_DIR
 
 #source the build directory
-printf "\n\n======================================== Building bax_dep ========================================\n"
+printf "\n\n======================================== Building $COMMON_DIR ========================================\n"
 source $BASE_DIR/devel/setup.bash
 
 wstool init $COMMON_DIR/src
@@ -38,7 +38,7 @@ wstool update -t $COMMON_DIR/src
 catkin build -w $COMMON_DIR
 
 #source the dep directory
-printf "\n\n======================================== Building bax_dev ========================================\n"
+printf "\n\n======================================== Building $DEV_DIR ========================================\n"
 source $COMMON_DIR/devel/setup.bash
 
 wstool init $DEV_DIR/src
