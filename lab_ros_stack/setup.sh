@@ -17,11 +17,12 @@ sudo bash install-sudo-required.sh
 #build the directory where we will install stuff
 source ./build_workspace.sh
 
-if ask "Do you want to install all baxter related ros packages?"; then
+if ask "Do you want to install all Baxter related ROS packages?"; then
     #run the setup baxter worskacep script
     source ./setup_baxter_workspace.sh
 fi
 
+source ./install-alloy.sh
 
-
-rm setup_baxter_workspace.sh install-sudo-required.sh build_workspace.sh install-alloy.sh install-sudo-basic-program.sh
+echo "============ Removing all scripts ===========\n"
+rm setup_baxter_workspace.sh install-sudo-required.sh build_workspace.sh install-alloy.sh install-sudo-basic-program.sh ask.sh setup.sh
