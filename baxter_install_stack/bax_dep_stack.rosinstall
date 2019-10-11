@@ -1,12 +1,12 @@
 - git:
     local-name: success_polly_speech
-    uri: https://github.com/SUCCESS-MURI/success_polly_speech.git
+    uri: git@github.com:SUCCESS-MURI/success_polly_speech.git
     version: master
 - git:
     local-name: success_baxter_tools
-    uri: https://github.com/SUCCESS-MURI/success_baxter_tools.git
+    uri: git@github.com:SUCCESS-MURI/success_baxter_tools.git
     version: master
 - git:
     local-name: success_baxter_safety
-    uri: https://github.com/SUCCESS-MURI/success_baxter_safety.git
+    uri: git@github.com:SUCCESS-MURI/success_baxter_safety.git
     version: master

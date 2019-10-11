@@ -1,4 +1,4 @@
 - git:
     local-name: lab_baxter_demos
-    uri: https://github.com:CMU-ARM/lab_baxter_demos.git
+    uri: git@github.com:CMU-TBD/Lab_Baxter_Demos.git
     version: kinetic-devel
