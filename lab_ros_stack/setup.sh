@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-printf "\n\n======================================== Getting shell scripts ========================================\n"
+printf "\n==== Getting shell scripts ====\n"
 wget https://raw.githubusercontent.com/CMU-TBD/lab_scripts/master/lab_ros_stack/install-sudo-required.sh
 wget https://raw.githubusercontent.com/CMU-TBD/lab_scripts/master/lab_ros_stack/install-alloy.sh
 wget https://raw.githubusercontent.com/CMU-TBD/lab_scripts/master/lab_ros_stack/install-sudo-basic-program.sh
@@ -24,5 +24,7 @@ fi
 
 source ./install-alloy.sh
 
-echo "============ Removing all scripts ===========\n"
+echo "\n====  Removing all scripts ====\n"
 rm setup_baxter_workspace.sh install-sudo-required.sh build_workspace.sh install-alloy.sh install-sudo-basic-program.sh ask.sh setup.sh
+
+echo "\n==== All Done! ====\n"
