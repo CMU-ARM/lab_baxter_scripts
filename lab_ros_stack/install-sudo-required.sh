@@ -8,6 +8,8 @@ fi
 # --- ROS Relate Stuff
 #source the list
 
+source ./install-sudo-basic-program.sh
+
 printf "\n\n======================================== Setting up ROS ========================================\n"
 sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
