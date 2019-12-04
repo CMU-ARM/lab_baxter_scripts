@@ -34,8 +34,23 @@ baxter_2_hostname="192.168.0.201"
 your_ip="$(ip address | grep -P "inet 192.168.\d+.\d+" | awk '{print $2}' | cut -f1 -d"/")"
 #your_hostname="my_computer.local"
 
+
 # Specify ROS distribution (e.g. indigo, hydro, etc.)
-ros_version=$ROS_DISTRO
+#check the ubuntu version and source the correct version of ros
+#we still think it will work with indigo
+UBUNTU_VERSION=$(lsb_release -rs)
+if [ $UBUNTU_VERSION == "16.04" ]
+then
+ros_version='kinetic'
+fi
+if [ $UBUNTU_VERSION == "14.04" ]
+then
+ros_version='indigo'
+fi
+if [ $UBUNTU_VERSION == "18.04" ]
+then
+ros_version='melodic'
+fi
 #-----------------------------------------------------------------------------#
 
 tf=$(mktemp)

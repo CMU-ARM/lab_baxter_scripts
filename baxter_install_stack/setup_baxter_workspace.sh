@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #check the ubuntu version and source the correct version of ros
-#we still think it will work with indigols
+#we still think it will work with indigo
 UBUNTU_VERSION=$(lsb_release -rs)
 if [ $UBUNTU_VERSION == "16.04" ]
 then
